@@ -1,0 +1,58 @@
+<ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1B1B1B">
+
+    <!-- Reel 1 -->
+    <ImageView
+        android:id="@+id/reel1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/reel2"
+        android:layout_marginTop="80dp"/>
+
+    <!-- Reel 2 -->
+    <ImageView
+        android:id="@+id/reel2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="@id/reel1"
+        app:layout_constraintStart_toEndOf="@id/reel1"
+        app:layout_constraintEnd_toStartOf="@id/reel3"/>
+
+    <!-- Reel 3 -->
+    <ImageView
+        android:id="@+id/reel3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toTopOf="@id/reel1"
+        app:layout_constraintStart_toEndOf="@id/reel2"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Spin Button -->
+    <Button
+        android:id="@+id/btnSpin"
+        android:text="SPIN 🎰"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/reel1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"/>
+
+    <!-- Coins -->
+    <TextView
+        android:id="@+id/txtCoins"
+        android:text="Coins: 100"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/btnSpin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+</ConstraintLayout>
